@@ -17,8 +17,15 @@
     [disabled]="!allowNewServer"
     (click)="onCreateServer()">Add New Button</button>
 
-<p *ngIf="serverCreated; else noServer">Server is created with the name {{ serverName }}</p>
+<p 
+    [ngStyle]="{backgroundColor: getColor()}"
+    *ngIf="serverCreated; else noServer">
+    Server is created with the name {{ serverName }}
+</p>
+
 <ng-template #noServer>
     <p>No server is created</p>
 </ng-template>
+
+
 

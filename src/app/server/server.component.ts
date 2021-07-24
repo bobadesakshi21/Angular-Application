@@ -9,6 +9,11 @@ export class ServerComponent {
   allowNewServer = true;
   serverName = 'Default Server';
   serverCreated = false;
+  serverStatus = '';
+
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online':'offline';
+  }
 
   onCreateServer() {
     this.serverCreated = true;
@@ -16,5 +21,9 @@ export class ServerComponent {
 
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
+  }
+
+  getColor() {
+    return this.serverStatus === 'online'? 'green': 'red';
   }
 }
