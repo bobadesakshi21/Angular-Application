@@ -1,9 +1,14 @@
 <h3>Server Component</h3>
 
+<!-- <input 
+    type="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)"> -->
+
 <input 
     type="text" 
     class="form-control"
-    (input)="onUpdateServerName($event)">
+    [(ngModel)]="serverName">
 
 <p>SERVER NAME: {{ serverName }}</p>
 

@@ -8,7 +8,7 @@ export class ServerComponent {
   
   allowNewServer = true;
   serverCreationStatus = 'No server was created';
-  serverName = '';
+  serverName = 'Default Server';
 
   onCreateServer() {
     this.serverCreationStatus = 'Server was created';
