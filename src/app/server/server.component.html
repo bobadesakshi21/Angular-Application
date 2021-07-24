@@ -1,8 +1,8 @@
 <h3>Server Component</h3>
-<h5>
-    Id: {{ serverId }}
-    Status: {{ getStatus() }}
-    AllowNewServer: <p [innerText]="allowNewServer"></p>
-</h5>
 
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add New Button</button>
+<button 
+    class="btn btn-primary" 
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()">Add New Button</button>
+
+{{ serverCreationStatus }}

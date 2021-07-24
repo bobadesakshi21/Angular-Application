@@ -7,10 +7,10 @@ import { Component } from "@angular/core";
 export class ServerComponent {
   
   allowNewServer = true;
-  serverId = 10;
-  serverStatus: string = 'Online';
+  serverCreationStatus = 'No server was created';
 
-  getStatus() {
-    return this.serverStatus;
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created';
+    console.log('Server Created')
   }
 }
