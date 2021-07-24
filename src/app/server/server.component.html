@@ -1,5 +1,12 @@
 <h3>Server Component</h3>
 
+<input 
+    type="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+
+<p>SERVER NAME: {{ serverName }}</p>
+
 <button 
     class="btn btn-primary" 
     [disabled]="!allowNewServer"
