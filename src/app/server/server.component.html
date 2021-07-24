@@ -19,6 +19,7 @@
 
 <p 
     [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: checkIfOnline()}"
     *ngIf="serverCreated; else noServer">
     Server is created with the name {{ serverName }}
 </p>
